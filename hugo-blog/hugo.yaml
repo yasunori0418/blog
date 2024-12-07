@@ -1,17 +1,44 @@
+archetypeDir: archetypes
+assetDir: assets
 baseurl: https://blog.yasunori0418.dev/
-languageCode: ja
-theme: hugo-theme-stack
-title: yasunori0418's blog
-description: yasunori0418のブログ
+buildDrafts: false
+buildExpired: false
+buildFuture: true
+canonifyURLs: true
+contentDir: content
 copyright: yasunori0418
-
-# Theme i18n support
-# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: ja
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
+dataDir: data
+defaultContentLanguage: ja
+defaultContentLanguageInSubdir: false
+disableAliases: false
+disableHugoGeneratorInject: false
+disableKinds: []
+disableLiveReload: false
+disablePathToLower: false
+enableEmoji: true
+enableGitInfo: true
+enableInlineShortcodes: true
+enableRobotsTXT: false
+googleAnalytics: G-HRWSM5E7JT
 hasCJKLanguage: true
+languageCode: ja
+noChmod: false
+noTimes: false
+pluralizeListTitles: true
+publishDir: public
+relativeURLs: true
+refLinksErrorLevel: ERROR
+removePathAccents: true
+rssLimit: -1
+summaryLength: 70
+theme: hugo-theme-stack
+themesDir: themes
+timeout: 30s
+timeZone: Asia/Tokyo
+title: yasunori0418's blog
+titleCaseStyle: ap
+uglyURLs: false
+watch: false
 
 services:
   # Change it to your Disqus shortname before using
@@ -22,7 +49,8 @@ services:
     id: G-HRWSM5E7JT
 
 pagination:
-  pagerSize: 3
+  pagerSize: 10
+  path: page
 
 permalinks:
   post: /p/:slug/
@@ -43,8 +71,8 @@ params:
     customText:
 
   dateFormat:
-    published: 2006 Jan 02
-    lastUpdated: 2006 Jan 02 15:04 MST
+    published: 2006-01-02T15:04:05
+    lastUpdated: 2006-01-02T15:04:05
 
   sidebar:
     emoji: 🫖
@@ -208,42 +236,7 @@ menu:
         icon: brand-twitter
 
 related:
-  includeNewer: true
-  threshold: 60
-  toLower: false
-  indices:
-    - name: tags
-      weight: 100
-
-    - name: categories
-      weight: 200
+  _merge: deep
 
 markup:
-  goldmark:
-    extensions:
-      passthrough:
-        enable: true
-        delimiters:
-          block:
-            - - \[
-              - \]
-            - - $$
-              - $$
-          inline:
-            - - \(
-              - \)
-    renderer:
-      ## Set to true if you have HTML content inside Markdown
-      unsafe: true
-  tableOfContents:
-    endLevel: 4
-    ordered: true
-    startLevel: 2
-  highlight:
-    noClasses: false
-    codeFences: true
-    guessSyntax: true
-    lineNoStart: 1
-    lineNos: true
-    lineNumbersInTable: true
-    tabWidth: 4
+  _merge: deep
