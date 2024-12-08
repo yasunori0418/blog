@@ -2,6 +2,11 @@
 slug: want_todo_list_from_now_on
 title: とりあえず、これからやりたいこと
 date: 2024-12-03T21:20:50+09:00
+isCJKLnaguage: true
+categories:
+  - memo
+tags:
+  -
 ---
 
 ## やりたいことが多すぎる
