@@ -199,9 +199,9 @@ params:
 
   defaultImage:
     opengraph:
-      enabled: false
+      enabled: true
       local: false
-      src:
+      src: https://github.com/yasunori0418.png
 
   colorScheme:
     # Display toggle
