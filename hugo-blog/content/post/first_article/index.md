@@ -2,6 +2,11 @@
 slug: first_article
 title: イケイケエンジニアはブログを1つは持っていないとダメらしい
 date: 2024-10-16T01:30:50+09:00
+isCJKLnaguage: true
+categories:
+  - poem
+tags:
+  -
 ---
 
 ## まずは作成してみた

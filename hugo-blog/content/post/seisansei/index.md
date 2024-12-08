@@ -2,6 +2,11 @@
 title: 『生産性』を読んでの感想
 slug: Seisansei
 date: 2024-12-04T22:00:46+09:00
+isCJKLnaguage: true
+categories:
+  - 読書感想
+tags:
+  -
 ---
 
 ## 始めに
