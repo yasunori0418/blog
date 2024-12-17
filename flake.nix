@@ -34,10 +34,20 @@
         }:
         {
           devenv.shells.default = {
-            packages = with pkgs; [
-              hugo
-              markdownlint-cli
-            ];
+            packages =
+              let
+                mdformatAndPlugins = with pkgs.python312Packages; [
+                  mdformat
+                  mdformat-frontmatter
+                  mdformat-tables
+                ];
+              in
+              with pkgs;
+              [
+                hugo
+                markdownlint-cli
+              ]
+              ++ mdformatAndPlugins;
             enterShell = ''
               which hugo
               hugo version
