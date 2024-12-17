@@ -36,6 +36,7 @@
           devenv.shells.default = {
             packages = with pkgs; [
               hugo
+              markdownlint-cli
             ];
             enterShell = ''
               which hugo
