@@ -33,12 +33,14 @@
           ...
         }:
         {
-          devenv.shells = {
-            default = {
-              packages = [
-                pkgs.hugo
-              ];
-            };
+          devenv.shells.default = {
+            packages = with pkgs; [
+              hugo
+            ];
+            enterShell = ''
+              which hugo
+              hugo version
+            '';
           };
         };
     };
