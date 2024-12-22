@@ -1,5 +1,5 @@
 ---
-title: About
+title: Hi! I'm yasunori0418!
 aliases:
   - contact
 menu:
@@ -18,3 +18,6 @@ menu:
 *a.k.a: yasunori0418*
 
 <!-- textlint-enable -->
+
+GitHub: [yasunori0418](https://github.com/yasunori0418)  
+Twitter: [@YKirin0418](https://x.com/ykirin0418)  
