@@ -1,5 +1,5 @@
 ---
-title: Hi! I'm yasunori0418!
+title: about
 aliases:
   - contact
 menu:
