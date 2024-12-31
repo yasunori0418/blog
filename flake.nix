@@ -46,6 +46,7 @@
               [
                 hugo
                 markdownlint-cli
+                zenn-cli
               ]
               ++ mdformatAndPlugins;
             enterShell = ''
