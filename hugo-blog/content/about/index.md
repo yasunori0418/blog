@@ -19,8 +19,8 @@ menu:
 
 <!-- textlint-enable -->
 
-GitHub: [yasunori0418](https://github.com/yasunori0418)  
-Twitter: [@YKirin0418](https://x.com/ykirin0418)  
+GitHub: [yasunori0418](https://github.com/yasunori0418)\
+Twitter: [@YKirin0418](https://x.com/ykirin0418)
 
 ## 好きな『物/技術』
 
@@ -47,10 +47,12 @@ Twitter: [@YKirin0418](https://x.com/ykirin0418)
 
 ## 仕事で使ったことのある『言語/フレームワーク/技術』
 
+- Linux
+  - 日常的に使用中
 - Git
-- GitHub
-- GitLab
-  - 自己ホスティングされた環境での利用経験
+  - 基本的な操作から、簡単なrebase操作まで可能
+  - GitHubを普段利用
+  - 過去の職場では自己ホスティングのGitLabを使用
 - ~Ruby on Rails~
   - めっちゃ古い！
   - 新しい言語仕様やフレームワークについては詳しく…ない
@@ -60,7 +62,7 @@ Twitter: [@YKirin0418](https://x.com/ykirin0418)
   - FastAPI/Pydantic
     - 新規サービスの開発に利用
   - SQLAlchemy
-    - バッチのリプレイス
+    - バッチのリプレイスや新規サービスの開発に利用
   - Selenium
     - 業務自動化ツールの一環でメンテナンス経験あり
   - pytest
@@ -75,7 +77,7 @@ Twitter: [@YKirin0418](https://x.com/ykirin0418)
     - テストコードが無いところにテストコード追加経験あり
 - TypeScript
   - React.js/Next.js
-    - ちょっと触るくらい
+    - ちょっと触れるくらい
   - Vitest
     - AWSのLambdaで動かしているバッチに対してテストコード追加に利用
 - 開発環境ツールセット
@@ -84,12 +86,14 @@ Twitter: [@YKirin0418](https://x.com/ykirin0418)
   - awk
   - Makefile
   - 業務でこれらのツールを使用して共通的な開発用サブコマンドの作成
+  - 簡単なシェル芸なら可能
 - RDBMS
   - MySQL/MariaDB
     - 1億レコードのテーブル移行作業の経験有り
     - 移行作業に合わせて、Alter文と同等のプロシージャを作成
   - Oracle
 - Apache
+  - Perl/CGIを触る過程で設定を操作した経験あり
 - AWS
   - VPC
   - EC2
@@ -106,5 +110,3 @@ Twitter: [@YKirin0418](https://x.com/ykirin0418)
   - CloudWatch
     - Lambdaのテスト監視に使用
   - SNS
-
-## 業務のプロジェクトと利用した技術スタックのまとめ
