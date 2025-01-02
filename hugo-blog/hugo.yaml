@@ -3,7 +3,7 @@ assetDir: assets
 baseurl: https://blog.yasunori0418.dev/
 buildDrafts: false
 buildExpired: false
-buildFuture: true
+buildFuture: false
 canonifyURLs: true
 contentDir: content
 copyright: yasunori0418
