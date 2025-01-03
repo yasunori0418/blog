@@ -4,3 +4,9 @@
   --base-font-family: "Lato", var(--sys-font-family), var(--ja-font-family), sans-serif;
   --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--ja-font-family), monospace;
 }
+
+@import "iconfont";
+
+.main-article .article-content {
+  @import "_partial/post/admonition.scss";
+}
