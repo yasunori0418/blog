@@ -26,8 +26,8 @@ tags:
 
 vimのhelpは次のとおり。
 
-- [`:h /\zs`](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Czs)
-- [`:h /\ze`](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Cze)
+- [`:h /\zs`(vimdoc-ja)](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Czs)
+- [`:h /\ze`(vimdoc-ja)](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Cze)
 
 上記のヘルプを最初に見たときは何を言っているのか分からず、良さを実感することがありませんでした。\
 しかし、このパターンが生きてくるのは、置き換えの`s`コマンドや`gn`テキストオブジェクトと組み合わせたときです。
@@ -120,3 +120,9 @@ vimのhelpは次のとおり。
 
 ただ、あのときはこのコマンドをマクロの中で実行したかったので、\
 バッファー全体（`%`）に対する置き換えという状況なら何も問題ありません。
+
+## 参考文献
+
+- [`:h /\zs`(vimdoc-ja)](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Czs)
+- [`:h /\ze`(vimdoc-ja)](https://vim-jp.org/vimdoc-ja/pattern.html#/%5Cze)
+- 類似するパターンとして、[Perl正規表現の`\K`の説明](https://perldoc.jp/docs/perl/5.40.0/perlre.pod#:~:text=(%3F%3C%3Dpattern)-,%5CK,-(*plb%3Apattern))
