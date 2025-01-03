@@ -25,7 +25,7 @@
       ];
       perSystem =
         {
-          # config,
+          config,
           # self',
           # inputs',
           pkgs,
@@ -49,9 +49,38 @@
                 zenn-cli
               ]
               ++ mdformatAndPlugins;
+            scripts = {
+              list =
+                let
+                  inherit (pkgs) lib;
+                in
+                {
+                  exec = ''
+                    echo
+                    echo 🦾 Helper scripts you can run to make your development richer:
+                    echo 🦾
+                    ${pkgs.gnused}/bin/sed -e 's| |••|g' -e 's|=| |' <<EOF \
+                    | ${pkgs.util-linuxMinimal}/bin/column -t | ${pkgs.gnused}/bin/sed -e 's|^|🦾 |' -e 's|••| |g'
+                    ${lib.generators.toKeyValue { } (
+                      lib.mapAttrs (name: value: value.description) config.devenv.shells.default.scripts
+                    )}
+                    EOF
+                    echo
+                  '';
+                  description = "devenvで定義したのscripts一覧";
+                };
+              hugo-server = {
+                exec = ''
+                  cd hugo-blog
+                  hugo server --buildFuture
+                '';
+                description = "hugo-blog執筆用:未来に公開する記事を表示する";
+              };
+            };
             enterShell = ''
-              which hugo
               hugo version
+              echo zenn v$(zenn --version)
+              list
             '';
           };
         };
