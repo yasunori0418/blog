@@ -71,10 +71,17 @@
                 };
               hugo-server = {
                 exec = ''
-                  cd hugo-blog
+                  cd $REPO_ROOT/hugo-blog
                   hugo server --buildFuture
                 '';
                 description = "hugo-blog執筆用:未来に公開する記事を表示する";
+              };
+              hugo-new-content = {
+                exec = ''
+                  cd $REPO_ROOT/hugo-blog
+                  hugo new content content/post/$1/index.md
+                '';
+                description = "hugo-blog執筆用:新規の記事作成";
               };
             };
             enterShell = ''
