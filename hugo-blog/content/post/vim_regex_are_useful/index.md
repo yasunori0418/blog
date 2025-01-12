@@ -1,6 +1,6 @@
 ---
 title: Vim正規表現の\zsと\zeが便利って話
-slug: combining_vim_regex_and_macros
+slug: vim_regex_are_useful
 date: 2025-01-13T00:00:00+09:00
 publishDate: 2025-01-13T00:00:00+09:00
 isCJKLnaguage: true
