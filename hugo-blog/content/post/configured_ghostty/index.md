@@ -30,7 +30,7 @@ Ghostty自体は`zero configuration`を謳っていますが、[Configuration > 
 そんな人のためにGhosttyは次のコマンドを用意してくれています。
 
 ```shell
-ghostty +show-config --default --doc
+ghostty +show-config --default --docs
 ```
 
 これで各設定項目のドキュメント付きのデフォルト設定を出力できます。
