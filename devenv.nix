@@ -62,7 +62,6 @@ _: {
             exec = ''
               cd $REPO_ROOT/hugo-blog
               hugo new content content/post/$1/index.md
-              git checkout -b $1
             '';
             description = "hugo-blog執筆用: 新規の記事作成";
           };
