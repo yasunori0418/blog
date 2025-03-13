@@ -31,6 +31,14 @@ _: {
             zenn-cli
           ]
           ++ mdformatAndPlugins;
+        processes = {
+          hugo-server = {
+            exec = ''
+              cd $REPO_ROOT/hugo-blog
+              hugo server --buildFuture
+            '';
+          };
+        };
         scripts = {
           list =
             let
@@ -51,13 +59,6 @@ _: {
               '';
               description = "devenvで定義したのscripts一覧";
             };
-          hugo-server = {
-            exec = ''
-              cd $REPO_ROOT/hugo-blog
-              hugo server --buildFuture
-            '';
-            description = "hugo-blog執筆用: 未来に公開する記事を表示する";
-          };
           hugo-new-content = {
             exec = ''
               cd $REPO_ROOT/hugo-blog
