@@ -35,7 +35,7 @@ _: {
           hugo-server = {
             exec = ''
               cd $REPO_ROOT/hugo-blog
-              hugo server --buildFuture
+              hugo server --buildFuture --buildDrafts
             '';
           };
         };
