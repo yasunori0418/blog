@@ -17,6 +17,7 @@ rules:
   prh:
     rulePaths:
       - node_modules/prh/prh-rules/files/markdown.yml
-      - node_modules/prh/prh-rules/media/techbooster.yml
+      - node_modules/prh/prh-rules/media/WEB+DB_PRESS.yml
+      # - node_modules/prh/prh-rules/media/techbooster.yml
 plugins:
   "@textlint/markdown": true
