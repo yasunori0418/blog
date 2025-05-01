@@ -17,6 +17,8 @@ tags:
 
 2025年4月に株式会社ログラスにJoinしました。
 
+[![ほら、ちゃんとログラスにいますよ！](entry.png)](https://x.com/YKirin0418)
+
 前職については[こちら](../first-it-company-graduation)をご覧ください。
 
 ## ログラスとの出会い
