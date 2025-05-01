@@ -1,8 +1,8 @@
 ---
 title: 株式会社ログラスにJoinしました
 slug: join-loglass
-date: 2025-04-06T00:00:00+09:00
-publishDate: 2025-04-06T00:00:00+09:00
+date: 2025-05-01T14:00:00+09:00
+publishDate: 2025-05-01T14:00:00+09:00
 draft: false
 isCJKLnaguage: true
 categories:
