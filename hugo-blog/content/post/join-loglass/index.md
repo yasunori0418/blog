@@ -108,7 +108,9 @@ ITエンジニアになった時点で、子どものころからの夢であっ
 さて、ここまでの内容で私のログラスへの熱い思いは伝わったでしょうか？\
 弊社は現在エンジニア採用も積極的に行っているため、興味がある方は下記のリンクから応募をお待ちしています！
 
-[カジュアル面談はこちらから][pitta]
+[採用情報はこちら][エンジニア採用情報]
+
+[カジュアル面談はこちら][pitta]
 
 <!-- textlint-enable -->
 
@@ -118,3 +120,4 @@ ITエンジニアになった時点で、子どものころからの夢であっ
 [pitta]: https://pitta.me/matches/dlarsRnSEDwx
 [webアプリケーションエンジニア採用ページ]: https://hrmos.co/pages/loglass/jobs/Eng-AE-002
 [村本さんの記事]: https://zenn.dev/loglass/articles/01b786462eacca
+[エンジニア採用情報]: https://www.loglass.co.jp/recruit/for-engineers
