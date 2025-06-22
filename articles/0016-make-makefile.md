@@ -7,6 +7,7 @@ topics:
   - awk
   - lgtechblogsprint
 published: true
+published_at: 2025-07-07
 publication_name: loglass
 ---
 
