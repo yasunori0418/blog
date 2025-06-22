@@ -3,9 +3,9 @@ title: 職場のプロジェクトに必ず配置しちゃうMakefileの話
 emoji: "🫖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics:
+  - lgtechblogsprint
   - makefile
   - awk
-  - lgtechblogsprint
 published: true
 published_at: 2025-07-07
 publication_name: loglass

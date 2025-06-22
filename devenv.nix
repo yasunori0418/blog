@@ -41,7 +41,7 @@ _: {
           zenn-server = {
             exec = ''
               cd $REPO_ROOT
-              zenn preview --open
+              zenn preview
             '';
           };
         };
