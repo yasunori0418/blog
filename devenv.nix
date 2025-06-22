@@ -38,6 +38,12 @@ _: {
               hugo server --buildFuture --buildDrafts
             '';
           };
+          zenn-server = {
+            exec = ''
+              cd $REPO_ROOT
+              zenn preview --open
+            '';
+          };
         };
         scripts = {
           list =
