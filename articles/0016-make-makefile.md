@@ -1,11 +1,12 @@
 ---
 title: 職場のプロジェクトに必ず配置しちゃうMakefileの話
-emoji: "🫖"
-type: "tech" # tech: 技術記事 / idea: アイデア
+emoji: 🫖
+type: tech # tech: 技術記事 / idea: アイデア
 topics:
   - lgtechblogsprint
   - makefile
   - awk
+  - platformengineer
 published: true
 published_at: 2025-07-07
 publication_name: loglass
@@ -84,11 +85,13 @@ front-dev: ## フロントエンド開発のローカルサーバーの起動
 init: db-setup front-setup ## 初回限定: フロントとバックの環境構築
 ```
 
+![`make`と`make init`の実行](/images/0016/auto_doc_make.png)
+
 <!-- markdownlint-enable MD010 MD013 -->
 
 > コピペで試してもらいやすく全て`echo`コマンドにしておきました。
 
-これによってタスクが増えていくことによる「各種タスクに対するドキュメント」が自動で生成することが可能になりました。
+これによってタスクが増えても各種タスクに対するドキュメントが自動で生成されるので、どのタスクが何をしてくれるのか把握できるようになりました。
 「さぁ、これでタスク増やしまくっても一安心」…とはならないんですよね。
 
 ### 大量のコマンドに対するグルーピング
