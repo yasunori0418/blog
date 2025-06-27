@@ -11,6 +11,7 @@ rules:
     no-unmatched-pair: false
   preset-jtf-style:
     "4.1.1.句点(。)": false
+    "4.2.7.コロン(：)": false
     "4.3.1.丸かっこ（）": false
     "4.3.2.大かっこ［］": false
     "4.3.7.山かっこ<>": false
