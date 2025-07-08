@@ -126,10 +126,6 @@ front-setup: ## フロントエンド開発環境初回構築
 	@echo "cd frontend && npm install"
 	@echo "cd frontend && npm run build"
 
-install-tools: ## 開発ツールのインストール
-	@echo "brew install postgresql redis minio awscli"
-	@echo "npm install -g @aws-amplify/cli"
-
 ## Docker関連 ##
 docker-up: ## Docker環境の構築
 	@echo "docker compose up -d"
