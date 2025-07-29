@@ -1,8 +1,8 @@
 ---
 title: 『WACATE2025 夏〜動かすだけじゃだめですか？〜』に参加しました！
 slug: wacate2025-summer
-date: 2025-06-28T10:15:49+09:00
-publishDate: 2025-06-28T10:15:49+09:00
+date: 2025-08-01T12:00:00+09:00
+publishDate: 2025-08-01T12:00:00+09:00
 draft: false
 isCJKLnaguage: true
 categories:
