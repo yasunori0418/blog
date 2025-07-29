@@ -15,6 +15,7 @@ rules:
     "4.3.1.丸かっこ（）": false
     "4.3.2.大かっこ［］": false
     "4.3.7.山かっこ<>": false
+  preset-ai-writing: true
   prh:
     rulePaths:
       - node_modules/prh/prh-rules/files/markdown.yml
