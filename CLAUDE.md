@@ -30,8 +30,8 @@ cd hugo-blog && hugo           # Hugoサイトをビルド
 ### Zenn用コマンド
 
 ```bash
-zenn-server                    # Zennプレビューサーバーを起動
-cd .. && npx zenn new:article  # 新しいZenn記事を作成 (プロジェクトルートから実行)
+zenn                                   # Zennプレビューサーバーを起動
+cd $REPO_ROOT && npx zenn new:article  # 新しいZenn記事を作成 (プロジェクトルートから実行)
 ```
 
 ### テキストリンティング
@@ -84,4 +84,3 @@ list                          # 利用可能なdevenvコマンドをすべて表
 
 - Hugoブログ: CloudFlare Pagesに自動デプロイ
 - Zenn記事: Zennプラットフォームで管理
-

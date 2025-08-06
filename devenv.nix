@@ -29,6 +29,7 @@ _: {
             hugo
             markdownlint-cli
             zenn-cli
+            pnpm
           ]
           ++ mdformatAndPlugins;
         processes = {
