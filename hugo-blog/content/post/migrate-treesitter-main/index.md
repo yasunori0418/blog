@@ -15,7 +15,7 @@ tags:
 <!-- textlint-disable -->
 {{< admonition type="info" title="Vim駅伝" >}}
 この記事は[Vim駅伝](https://vim-jp.org/ekiden/)の2025-08-13向けの記事です。\
-前回の記事は[mitsu-yuki](https://github.com/mitsu-yuki)さんの[『Vimへコピぺする時に置き換え元の文字でクリップボードを上書きしないいくつかの方法』](https://qiita.com/mitsu-yuki/private/566cd8634abe10a3341e)です。
+前回の記事は[mitsu-yuki](https://github.com/mitsu-yuki)さんの[『Vimへコピぺする時に置き換え元の文字でクリップボードを上書きしないいくつかの方法』](https://qiita.com/mitsu-yuki/items/566cd8634abe10a3341e)です。
 {{< /admonition >}}
 <!-- textlint-enable -->
 
@@ -238,7 +238,6 @@ https://github.com/yasunori0418/dotfiles/blob/b9c9122b6e2a47cb47b0703fa8b2ce67fc
 [^1]: [scfg]というFileTypeに対応するらしい。設定言語っぽいが知らべても使われている物が見つからなかった。
 
 <!-- links -->
-[prev-article]: https://qiita.com/mitsu-yuki/private/566cd8634abe10a3341e
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 [scfg]: https://github.com/rockorager/tree-sitter-scfg
