@@ -85,9 +85,120 @@ Nodeも必須にはなっていますが、使うことが無さそうな言語[
 
 後述しますが、treesitterを利用するFileTypeは明示することが可能になりました。
 
-## nvim-treesitter
+## 実際に移行していく
 
-## nvim-treesitter-textobjects
+主な変更点を確認できたところで、実際に移行作業をやっていきます。
+
+### nvim-treesitter
+
+```diff lua
+-require("nvim-treesitter.configs").setup({
+-  -- 中略
+-})
++require("nvim-treesitter").setup({
++  install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "site"),
++})
+```
+
+`master`までは`setup`関数内に大量の項目を設定するようになっていましたが、`main`において設定項目は`install_dir`しかありません。\
+現状の設定項目自体もデフォルトの値を設定しているだけですが、私は明示的に設定しています。
+
+`setup`関数呼び出し後、パーサのインストールが可能になります。
+
+```lua
+require("nvim-treesitter").install({
+  "bash",
+  "markdown",
+  "kotlin",
+  --[[
+    この辺に使う言語を列挙していってください。
+    @see https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
+  ]]
+}, {
+  force = false, -- force installation of already installed parsers
+  generate = true, -- generate `parser.c` from `grammar.json` or `grammar.js` before compiling.
+  max_jobs = 4, -- limit parallel tasks (useful in combination with {generate} on memory-limited systems).
+  summary = false, -- print summary of successful and total operations for multiple languages.
+} --[[@as InstallOptions]])
+```
+
+`install`関数の呼び出しによって、パーサのインストールが始まりますが、インストール先は`setup`関数内で設定した`install_dir`に以下のようなディレクトリ構成でパーサがインストールされます。
+
+```text
+~/.local/share/nvim/site
+│
+├── parser/
+│   └── *.so
+├── parser-info/
+│   └── *.revision
+└── queries/
+    └── */ nvim-treesitter内の`runtime/queries`からのsymlink
+        ├── folds.scm
+        ├── highlights.scm
+        ├── indents.scm
+        ├── injections.scm
+        └── locals.scm
+```
+
+queries内の物がnvim-treesitterの本体と言っても良いほど重要なデータであり、素敵なハイライト・インデント・折り畳みを提供するためのクエリ達です。\
+各言語毎にこれらのファイルがある訳ではないため、あくまで一例となります。\
+nvim-treesitterとしてどこまでサポートされているかは、[`SUPPORT_LANGUAGES.md`][support_languages]を参照してください。
+
+ちなみに[tree-sitter]本体をインストールしておかないと、インストール処理だけが始まったように見えて、完了しない現象が発生します。\
+私は[tree-sitter]本体のインストールを忘れて、小一時間ほど悩んでいました。
+
+また、これまで`setup`関数で有効化していたハイライト・インデント・折り畳みはどのように設定するかと言うと、以下のような記述が必要です。
+
+```lua
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = {"bash", "markdown", "kotlin"},
+  callback = function()
+    -- syntax highlighting, provided by Neovim
+    vim.treesitter.start()
+    -- folds, provided by Neovim
+    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    -- indentation, provided by nvim-treesitter
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end,
+})
+```
+
+***ーー お分かりいただけただろうか？***
+
+これまで明示せずとも、勝手にtreesitterが各FileTypeで適応されていたのが、特定のFileTypeにだけ適応されるようになったのです！\
+これはもしや、『**設定させていただきありがとうございます**』の精神をNeovim本体も理解しだしたように見えないでしょうか？
+
+今回の例では`bash`を開いたときはtreesitterが有効になりますが、同じようなsyntaxをしている`sh`や`zsh`でもtreesitterが有効になってほしいというパターンがあると思います。\
+その場合、`autocmd`の`pattern`にFileTypeを追加するだけでなく、以下のような宣言も追加で必要になります。
+
+```lua
+vim.treesitter.language.register("bash", { "sh", "zsh" })
+```
+
+これにより、`bash`のクエリを使って`sh`と`zsh`も同じようにハイライトするという振る舞いに変わります。
+
+<!-- textlint-disable -->
+{{< admonition details="true" type="quote" title=":h vim.treesitter.language.register()" >}}
+
+```vimdoc
+register({lang}, {filetype})              *vim.treesitter.language.register()*
+    Register a parser named {lang} to be used for {filetype}(s).
+
+    Note: this adds or overrides the mapping for {filetype}, any existing
+    mappings from other filetypes to {lang} will be preserved.
+
+    Parameters: ~
+      • {lang}      (`string`) Name of parser
+      • {filetype}  (`string|string[]`) Filetype(s) to associate with lang
+```
+
+{{< /admonition >}}
+<!-- textlint-enable -->
+
+ここで気がついてほしいのは、nvim-treesitterというプラグインの役割はパーサの管理とクエリ集になっているのです。\
+パーサの管理自体は別にすることだって事実上可能ではないでしょうか？
+
+### nvim-treesitter-textobjects
 
 ## まとめ
 
@@ -101,3 +212,4 @@ Nodeも必須にはなっていますが、使うことが無さそうな言語[
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 [scfg]: https://github.com/rockorager/tree-sitter-scfg
+[support_languages]: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
