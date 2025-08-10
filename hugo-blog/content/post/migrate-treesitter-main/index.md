@@ -200,6 +200,30 @@ register({lang}, {filetype})              *vim.treesitter.language.register()*
 
 ### nvim-treesitter-textobjects
 
+```diff lua
+-require("nvim-treesitter.configs").setup({
+-  textobjects = {
+-    -- 中略
+-  }
+-})
++require("nvim-treesitter-textobjects").setup({
++  select = { --[[中略]] }
++  move = { --[[中略]] }
++})
+```
+
+textobjectsの方も`nvim-treesitter.configs`の拡張から独自の`setup`関数に設定を記述するようになっています。\
+ほかにも`master`では`setup`関数内でキーマップの独自DSLが組み込まれていましたが、`main`では各textobjectsの振る舞いの設定のみを宣言し、
+実際のキーマップの設定は公開されているAPIを呼び出す形に変わっています。
+
+*これは明らかに、『**設定させていただきありがとうございます**』の精神を(ry。*
+
+こちらのキーマップ設定に関しては、好みの問題もあるため、公式のドキュメントを読みながら`vim.keymap.set`を呼び出しを列挙したら良いと思います。
+
+https://github.com/yasunori0418/dotfiles/blob/b9c9122b6e2a47cb47b0703fa8b2ce67fcb32085/home/.config/nvim/hooks/ts_textobjects.lua
+
+参考例として、私の設定のリンクを置いておきます。
+
 ## まとめ
 
 <!-- textlint-disable -->
