@@ -14,8 +14,8 @@ tags:
 
 <!-- textlint-disable -->
 {{< admonition type="info" title="Vim駅伝" >}}
-この記事は[Vim駅伝][ekiden]の2025-08-13向けの記事です。\
-前回の記事は[mitsu-yuki][mitsu-yuki]さんの[『Vimへコピぺする時に置き換え元の文字でクリップボードを上書きしないいくつかの方法』][prev-article]です。
+この記事は[Vim駅伝](https://vim-jp.org/ekiden/)の2025-08-13向けの記事です。\
+前回の記事は[mitsu-yuki](https://github.com/mitsu-yuki)さんの[『Vimへコピぺする時に置き換え元の文字でクリップボードを上書きしないいくつかの方法』](https://qiita.com/mitsu-yuki/private/566cd8634abe10a3341e)です。
 {{< /admonition >}}
 <!-- textlint-enable -->
 
@@ -145,7 +145,7 @@ require("nvim-treesitter").install({
 
 queries内の物がnvim-treesitterの本体と言っても良いほど重要なデータであり、素敵なハイライト・インデント・折り畳みを提供するためのクエリ達です。\
 各言語毎にこれらのファイルがある訳ではないため、あくまで一例となります。\
-nvim-treesitterとしてどこまでサポートされているかは、[`SUPPORT_LANGUAGES.md`][support_languages]を参照してください。
+nvim-treesitterとしてどこまでサポートされているかは、[`SUPPORT_LANGUAGES.md`を参照][support_languages]してください。
 
 ちなみに[tree-sitter]本体をインストールしておかないと、インストール処理だけが始まったように見えて、完了しない現象が発生します。\
 私は[tree-sitter]本体のインストールを忘れて、小一時間ほど悩んでいました。
@@ -238,8 +238,6 @@ https://github.com/yasunori0418/dotfiles/blob/b9c9122b6e2a47cb47b0703fa8b2ce67fc
 [^1]: [scfg]というFileTypeに対応するらしい。設定言語っぽいが知らべても使われている物が見つからなかった。
 
 <!-- links -->
-[ekiden]: https://vim-jp.org/ekiden/
-[mitsu-yuki]: https://github.com/mitsu-yuki
 [prev-article]: https://qiita.com/mitsu-yuki/private/566cd8634abe10a3341e
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
