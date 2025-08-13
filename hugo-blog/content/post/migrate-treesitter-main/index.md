@@ -78,13 +78,13 @@ Nodeも必須にはなっていますが、使うことが無さそうな言語[
 
 ### 共通IFの廃止
 
-個人的に一番うれしかった変更で、`require(nvim-treesitter.configs).setup()`というIFが廃止になりました。\
+個人的に一番うれしかった変更で、`require("nvim-treesitter.configs").setup()`というIFが廃止になりました。\
 このIFの悪いところとして、マスタとなる設定の定義はnvim-treesitter本体に存在するが、別のプラグインとしてnvim-treesitterの機能を使うために、設定を拡張するようになっていました。\
-今回の移行に関連するプラグイン達は同じようなIFになっており、nvim-yatiに関しては`require(nvim-treesitter.configs).setup()`のIFのままだったため、移行せず削除するという対応になりました。
+今回の移行に関連するプラグイン達は同じようなIFになっており、nvim-yatiに関しては`require("nvim-treesitter.configs").setup()`のIFのままだったため、移行せず削除するという対応になりました。
 
 ### 自動起動によるtreesitterの解析を廃止
 
-これも個人的にうれしい変更で、`master`では`require(nvim-treesitter.configs).setup()`呼び出し以降、すべてのFileTypeに対してtreesitterの利用を半強制されていました。\
+これも個人的にうれしい変更で、`master`では`require("nvim-treesitter.configs").setup()`呼び出し以降、すべてのFileTypeに対してtreesitterの利用を半強制されていました。\
 無効にする方法はありますが、少々面倒な手続きをsetup内に記述する必要がありました。
 
 後述しますが、treesitterを利用するFileTypeは明示することが可能になりました。
