@@ -1,8 +1,8 @@
 ---
 title: 私がLinuxデスクトップを愛する理由
 slug: reason-of-i-love-linux-desktop
-date: 2025-09-01T00:00:00+09:00
-publishDate: 2025-09-01T00:00:00+09:00
+date: 2025-08-26T19:00:00+09:00
+publishDate: 2025-08-26T19:00:00+09:00
 draft: false
 isCJKLnaguage: true
 categories:
