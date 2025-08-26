@@ -83,7 +83,7 @@ Linux firmwareは対応しているだろうか。\
 
 コンポジタとしてWaylandかX11を使わなくてはLinuxデスクトップとして楽しめない。\
 ディスプレイマネージャーには何を使おうか。\
-ウィンドウマネージャーは、X11ならi3wmか、Waylandならswayやhyperlandもある。
+ウィンドウマネージャーは、X11ならi3wmか、Waylandならswayやhyprlandもある。
 
 メインで使うエディタは何にする？\
 いっぱい設定したいからVimかEmacs？
