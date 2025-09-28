@@ -1,6 +1,6 @@
 # My Blogs
 
-- [blog.yasunori0418.com](https://blog.yasunori0418.com/)
+- [blog.yasunori0418.com](https://blog.yasunori0418.dev/)
 - [zenn.dev/yasunori_kirin](https://zenn.dev/yasunori_kirin)
 
 ## blog.yasunori0418.com
