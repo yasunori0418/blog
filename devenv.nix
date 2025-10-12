@@ -9,7 +9,7 @@ _: {
     {
       config,
       # self',
-      # inputs',
+      inputs',
       pkgs,
       # system,
       ...
@@ -18,6 +18,7 @@ _: {
       devenv.shells.default = {
         packages =
           let
+            myNurPkgs = inputs'.yasunori-nur.legacyPackages;
             mdformatAndPlugins = with pkgs.python312Packages; [
               mdformat
               mdformat-frontmatter
@@ -30,6 +31,7 @@ _: {
             markdownlint-cli
             zenn-cli
             pnpm
+            myNurPkgs.k1Low-deck
           ]
           ++ mdformatAndPlugins;
         processes = {
