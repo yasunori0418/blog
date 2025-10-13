@@ -32,6 +32,9 @@ _: {
             zenn-cli
             pnpm
             silicon
+            imagemagick
+            qrencode
+            mermaid-cli
             myNurPkgs.k1Low-deck
             myNurPkgs.laminate
           ]
