@@ -24,3 +24,5 @@ memo: |
   Always, everyday, everyone, a memorial year of linux desktop!!
   And my dotfiles 5500commit over!!
 ```
+
+![icon](https://github.com/yasunori0418.png)
