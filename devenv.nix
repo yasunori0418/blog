@@ -75,6 +75,19 @@ _: {
             '';
             description = "hugo-blog執筆用: 新規の記事作成";
           };
+          credential4deck = {
+            exec = ''
+              declare -r deck_data="$HOME/.local/share/deck"
+              mkdir -p ~/.local/share/deck
+              op item list \
+              | rg 'k1Low-deck\/credentials\.json' \
+              | cut -d ' ' -f1 \
+              | xargs -I{} op item get {} --format json \
+              | jq -r '"op://\(.vault.name)/\(.id)/\(.files[0].name)"' \
+              | xargs -I{} op read --out-file $deck_data/credentials.json {}
+            '';
+            description = "k1Low/deckで使用するGoogleCloudのcredentials.jsonをダウンロードする";
+          };
         };
         enterShell = ''
           hugo version
