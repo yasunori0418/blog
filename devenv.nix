@@ -31,6 +31,7 @@ _: {
             markdownlint-cli
             zenn-cli
             pnpm
+            silicon
             myNurPkgs.k1Low-deck
           ]
           ++ mdformatAndPlugins;
