@@ -93,6 +93,12 @@ _: {
             '';
             description = "k1Low/deckで使用するGoogleCloudのcredentials.jsonをダウンロードする";
           };
+          laminate-cache-clean = {
+            exec = ''
+              rm -rf ~/.cache/laminate/cache/*
+            '';
+            description = "Songmu/laminateのキャッシュを飛ばす奴";
+          };
         };
         enterShell = ''
           hugo version
