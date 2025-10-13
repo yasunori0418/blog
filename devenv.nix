@@ -33,6 +33,7 @@ _: {
             pnpm
             silicon
             myNurPkgs.k1Low-deck
+            myNurPkgs.laminate
           ]
           ++ mdformatAndPlugins;
         processes = {
