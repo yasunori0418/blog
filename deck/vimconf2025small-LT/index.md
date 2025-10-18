@@ -34,21 +34,44 @@ memo: |
 
 ---
 
-<!-- {"layout": "contents_custom"} -->
+<!-- {"layout": "section"} -->
 
-## モチベーション
-
-### どうして`vim9script`を書こうと思ったのか
-
-- 普段使っているNeovimはある程度カスタム済み
-- 本家のVimもカスタムして、ミニマルな用途に使いたい
-  - skkeleton only
-  - temporary use
-- `vim9script`って`vim script`と比べて早いらしい
-- `dpp.vim`を`vim9script`で設定したくなった
+## Motivation
 
 ---
 
-<!-- {"layout": "center"} -->
+<!-- {"layout": "2column_contents_custom", "freeze": true} -->
 
-## Just For Fun
+## motivation
+
+### Why writing `vim9script`
+
+- The Neovim I use daily is fairly customized.
+- I want to customize the original Vim for minimalist use.
+  - skkeleton only <br>for VIME(Vim Input Method Editor)
+  - other temporary use etc...
+- `vim9script` is apparently <br>faster than `vim script`.
+- I wanted to configure `dpp.vim` <br>with `vim9script`
+
+### BTW, <br>dpp is "Dark Powered Plugin manager".<br>And to use dpp.vim.
+
+- `denops.vim` is required
+- Building a minimal plugin manager
+  - Plugin download
+  - Add plugin path to `runtimepath`
+- Multiple autocmd declarations
+- ***other a lot of configuration...***
+  - TypeScript
+  - vimrc in Vim or Neovim
+
+---
+
+<!-- {"layout": "center", "freeze": true} -->
+
+## <br><br><br>Just For Fun!!<br><br><br><br><br> And...
+
+---
+
+<!-- {"layout": "center", "freeze": true} -->
+
+## Thank you for making <br>                  the configuration available!
