@@ -2,7 +2,9 @@
 presentationID: 1j5LBMOnUlNFhtVfyOmEYsyM4G8Xkjvk5Eloti9AnhjU
 ---
 
-<!-- {"layout": "front_cover_custom"} -->
+<!-- textlint-disable -->
+
+<!-- {"layout": "front_cover_custom", "freeze": true} -->
 
 # Tried writing it `vim9script`
 
@@ -34,7 +36,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "section"} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## Motivation
 
@@ -88,16 +90,25 @@ memo: |
 
 ## pros
 
+### Let's try writing `vim9script`!!
+
 ---
 
 <!-- {"layout": "contents_custom", "freeze": false} -->
 
 ## cons
 
+### But `vim9script` is not perfect either.
+
 ---
 
 <!-- {"layout": "contents_custom", "freeze": false} -->
 
 ## points to note
+
+### Make sure to also check `:h vim9`
+
+- Must be write `vim9script` at first line
+  - It runs as `vim9script` from the line below where you written `vim9script`.
 
 ---
