@@ -75,3 +75,29 @@ memo: |
 <!-- {"layout": "center", "freeze": true} -->
 
 ## Thank you for making <br>                  the configuration available!
+
+---
+
+<!-- {"layout": "section"} -->
+
+## `vim9script` pros&cons, points to note
+
+---
+
+<!-- {"layout": "contents_custom", "freeze": false} -->
+
+## pros
+
+---
+
+<!-- {"layout": "contents_custom", "freeze": false} -->
+
+## cons
+
+---
+
+<!-- {"layout": "contents_custom", "freeze": false} -->
+
+## points to note
+
+---
