@@ -98,6 +98,27 @@ memo: |
 
 ### Let's try writing `vim9script`!!
 
+- Syntax from popular languages is being adopted. (see `:h vim9-rationale`)
+  - A lambda expression declared like a JavaScript/TypeScript arrow function.
+  - Comments starting with `#` and function declarations were adopted to mimic Python.
+- Change from dynamic typing to static typing. (see `:h vim9-types`)
+  - Strict type specification is required for arguments and return values.<br>  (see `:h E1096`, `E1174` or `E1175`)
+  - Changes in how variable length arguments are declared.<br>  (see `:h vim9-variable-arguments`)
+  - Generics functions can be declared and flexible typing is possible.<br>   (see `:h generic-functions`)
+
+---
+
+<!-- {"layout": "contents_only", "freeze": false} -->
+
+- When continuing a line,<br>a backslash is no longer required at the beginning of the continuation line.<br>   (see `:h vim9-line-continuation`)
+  - In addition to arrays and dictionaries, function arguments,<br>method chains using `->` and `.` no longer require continuation.
+- All functions are defined script local. (see `:h vim9script`)
+  - Functions declared using `export` or `import` can be called from outside.
+- Object-oriented programming is now possible with the addition of `class`.
+  - Since you can use `abstract class` and `interface class`,<br>you can create various objects.
+- Classes and functions can now be compiled,<br>and execution speed can be expected to be improved by 10 to 100 times. (see `:h Vim9-script`)
+  - Functions and classes that are called externally can be compiled with `defcompile`.<br>   (see `:h :defcompile`)
+
 ---
 
 <!-- {"layout": "contents_custom", "freeze": false} -->
