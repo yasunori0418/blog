@@ -70,7 +70,13 @@ memo: |
 
 <!-- {"layout": "center", "freeze": true} -->
 
-## <br><br><br>Just For Fun!!<br><br><br><br><br> And...
+## Because,<br><br>Just For Fun!!
+
+---
+
+<!-- {"layout": "center", "freeze": true} -->
+
+## And...
 
 ---
 
