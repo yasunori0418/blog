@@ -114,7 +114,10 @@ memo: |
 
 ### Make sure to also check `:h vim9`
 
-- Must be write `vim9script` at first line
+- Must be write `vim9script` at first line(see `:h E1170`)
   - It runs as `vim9script` from the line below where you written `vim9script`.
+- `call` and `eval` are no longer required for function calls (see `:h E1190`)
+  - Using `call` is deprecated
+  - Using `eval` is also deprecated and will result in an error in some situations (see `:h E1207`)
 
 ---
