@@ -92,7 +92,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "contents_custom", "freeze": false} -->
+<!-- {"layout": "contents_custom", "freeze": true} -->
 
 ## pros
 
@@ -108,7 +108,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "contents_only", "freeze": false} -->
+<!-- {"layout": "contents_only", "freeze": true} -->
 
 - When continuing a line,<br>a backslash is no longer required at the beginning of the continuation line.<br>   (see `:h vim9-line-continuation`)
   - In addition to arrays and dictionaries, function arguments,<br>method chains using `->` and `.` no longer require continuation.
