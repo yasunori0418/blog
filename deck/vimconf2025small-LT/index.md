@@ -86,9 +86,9 @@ memo: |
 
 ---
 
-<!-- {"layout": "section"} -->
+<!-- {"layout": "section", "freeze": true} -->
 
-## `vim9script` pros&cons, points to note
+## pros, cons, and points to note of `vim9script`<br>when compared to `vim script`.
 
 ---
 
