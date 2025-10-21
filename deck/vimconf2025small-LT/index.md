@@ -121,11 +121,21 @@ memo: |
 
 ---
 
-<!-- {"layout": "contents_custom", "freeze": false} -->
+<!-- {"layout": "contents_custom", "freeze": true} -->
 
 ## cons
 
 ### But `vim9script` is not perfect either.
+
+- It does not work with Neovim.
+  - Neovim official also states that `vim9script` is not supported.<br>   (see `:h Vim9script` in Neovim)
+- Can only be used after Vim9 and is not backward compatible.
+  - Use the **latest Vim!**
+  - **LATEST!!** You can solve everything by using the latest version!!
+  - Check with `echo has('vim9script')`!!!
+- LSP implementation does not exist.
+  - Even if you declare a class,<br>    it's painful because you can't complement the internal methods and properties.
+  - If you can input the declared class structure into your brain, in a sense,<br>    does this mean ***awaken to the text editor...?***
 
 ---
 
