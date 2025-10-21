@@ -152,3 +152,11 @@ memo: |
   - Using `eval` is also deprecated and will result in an error in some situations (see `:h E1207`)
 
 ---
+
+<!-- {"layout": "section", "freeze": true} -->
+
+## Conclusion
+
+---
+
+<!-- {"layout": "contents_only", "freeze": false} -->
