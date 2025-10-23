@@ -169,13 +169,15 @@ memo: |
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## Conclusion
 
 ---
 
-<!-- {"layout": "contents_only", "freeze": false} -->
+<!-- {"layout": "contents_custom", "freeze": true} -->
+
+## conclusion
 
 - `vim9script` is the best configuration element available in the **LATEST Vim!!**
 - Read lots of help! (see `:h help`)
@@ -185,4 +187,4 @@ memo: |
 
 ---
 
-<!-- {"layout": "EOF", "freeze": false} -->
+<!-- {"layout": "EOF", "freeze": true} -->
