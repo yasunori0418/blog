@@ -177,6 +177,12 @@ memo: |
 
 <!-- {"layout": "contents_only", "freeze": false} -->
 
+- `vim9script` is the best configuration element available in the **LATEST Vim!!**
+- Read lots of help! (see `:h help`)
+- Some parts are still under development!!
+- It has its awkward parts, but if you keep using it, **awaken to the text editor...?**
+- **Thank you for making the configuration available!!!!**
+
 ---
 
 <!-- {"layout": "EOF", "freeze": false} -->
