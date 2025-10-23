@@ -102,7 +102,7 @@ memo: |
   - A lambda expression declared like a JavaScript/TypeScript arrow function.
   - Comments starting with `#` and function declarations were adopted to mimic Python.
 - Change from dynamic typing to static typing. (see `:h vim9-types`)
-  - Strict type specification is required for arguments and return values.<br>  (see `:h E1096`, `E1174` or `E1175`)
+  - Strict type specification is required for arguments and return values. (see `:h E1096`)
   - Changes in how variable length arguments are declared.<br>  (see `:h vim9-variable-arguments`)
   - Generics functions can be declared and flexible typing is possible.<br>   (see `:h generic-functions`)
 
@@ -139,21 +139,37 @@ memo: |
 
 ---
 
-<!-- {"layout": "contents_custom", "freeze": false} -->
+<!-- {"layout": "contents_custom", "freeze": true} -->
 
 ## points to note
 
 ### Make sure to also check `:h vim9`
 
-- Must be write `vim9script` at first line(see `:h E1170`)
+- `vim9script` is a practical but still under **development feature**.
+  - `:h vim9class.txt` also includes `To be done later`.
+  - `:h :++` also includes `in an expression is not supported yet.`.
+  - etc...
+- Must be write `vim9script` at first line. (see `:h E1170`)
   - It runs as `vim9script` from the line below where you written `vim9script`.
-- `call` and `eval` are no longer required for function calls (see `:h E1190`)
-  - Using `call` is deprecated
-  - Using `eval` is also deprecated and will result in an error in some situations (see `:h E1207`)
+- Handling of `null_<type>` of each type is special. (see `:h null`)
+  - There's a lot of documentation about `null`, so feel free to read it ;-)
 
 ---
 
-<!-- {"layout": "section", "freeze": true} -->
+<!-- {"layout": "contents_only", "freeze": true} -->
+
+- `call` and `eval` are no longer required for function calls. (see `:h E1190`)
+  - Using `call` is deprecated.
+  - Using `eval` is also deprecated and will result in an error in some situations. (see `:h E1207`)
+- Destructive array operations result in an error. (see: `:h E1206`)
+  - For functions such as `map` and `filter`,<br>operations that change from the original type will result in an error.
+  - Avoid changing the original type using `mapnew` or `copy()->filter()`.
+- When using Funcref as an argument in `foreach` etc.,<br>the lambda expression argument cannot be omitted.<br>   (see`:h foreach()`)
+  - I was quite distressed by this issue.
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
 
 ## Conclusion
 
