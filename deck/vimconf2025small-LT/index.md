@@ -44,7 +44,9 @@ memo: |
 
 <!-- {"layout": "2column_contents_custom", "freeze": true} -->
 
-## motivation
+<!-- markdownlint-disable MD024 -->
+## Motivation
+<!-- markdownlint-enable MD024 -->
 
 ### Why writing `vim9script`
 
@@ -165,7 +167,7 @@ memo: |
   - For functions such as `map` and `filter`,<br>operations that change from the original type will result in an error.
   - Avoid changing the original type using `mapnew` or `copy()->filter()`.
 - When using Funcref as an argument in `foreach` etc.,<br>the lambda expression argument cannot be omitted.<br>   (see`:h foreach()`)
-  - I was quite distressed by this issue.
+  - This was a notable pain point.
 
 ---
 
@@ -177,7 +179,9 @@ memo: |
 
 <!-- {"layout": "contents_custom", "freeze": true} -->
 
-## conclusion
+<!-- markdownlint-disable MD024 -->
+## Conclusion
+<!-- markdownlint-enable MD024 -->
 
 - `vim9script` is the best configuration element available in the **LATEST Vim!!**
 - Read lots of help! (see `:h help`)
