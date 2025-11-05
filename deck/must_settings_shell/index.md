@@ -10,19 +10,19 @@ presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## ところで皆さん、<br>黒い画面は好きですか？
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## 私は大好きです！
 
 ---
 
-<!-- {"layout": "title_only", "freeze": false} -->
+<!-- {"layout": "title_only", "freeze": true} -->
 
 ## こんなやつ？
 
@@ -30,43 +30,43 @@ presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## なんか…<br>          ダサくない…？
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## 私が好きなのは…
 
 ---
 
-<!-- {"layout": "space", "freeze": false} -->
+<!-- {"layout": "space", "freeze": true} -->
 
 ![私が好きなターミナル](./cool_term.png)
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## これこれ！<br><br>こういうの！
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## でも、実際のところ、<br>こうやってカスタマイズしている人少ないよね…？
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## これが、<br>今回の勉強会のモチベーション
 
 ---
 
-<!-- {"layout": "title_only", "freeze": false} -->
+<!-- {"layout": "title_only", "freeze": true} -->
 
 ## 自己紹介
 
