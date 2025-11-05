@@ -2,11 +2,15 @@
 presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 ---
 
+<!-- {"layout": "title", "freeze": true} -->
+
 # 絶対に設定しておきたいshell環境
 
 ## ゆるくshellを使いやすくしよう
 
 ---
+
+<!-- {"layout": "title_only", "freeze": false} -->
 
 ## 自己紹介
 
