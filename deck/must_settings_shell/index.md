@@ -86,3 +86,41 @@ memo: |
 ```
 
 ![icon](https://github.com/yasunori0418.png)
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## それでは、本題へ…
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## shellを彩るプロンプト
+
+### AIのそれじゃないよ！
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## 標準的なコマンドを置き換えよう！
+
+### 拡張版のコマンド達を紹介
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## aliasだけじゃない！<br>これがプラグインやコマンドの<br>組み合わせだ！
+
+### スニペット展開やあいまい検索できるようになるzeno.zshとfzfの紹介
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## 設定を維持していくためのdotfiles
+
+### いっぱい育て行こう！
