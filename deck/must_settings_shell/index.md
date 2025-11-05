@@ -124,3 +124,15 @@ memo: |
 ## 設定を維持していくためのdotfiles
 
 ### いっぱい育て行こう！
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## まとめ
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
+## 勉強会にご参加<br>ありがとうございました！
