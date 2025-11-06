@@ -2,6 +2,8 @@
 presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 ---
 
+<!-- textlint-disable -->
+
 <!-- {"layout": "title", "freeze": true} -->
 
 # 絶対に設定しておきたいshell環境
@@ -60,13 +62,19 @@ presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 
 ---
 
-<!-- {"layout": "title_center", "freeze": true} -->
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## サーバー上は無理でも、<br>ローカルのshell環境は<br>カッコよくしよう！！
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
 
 ## これが、<br>今回の勉強会のモチベーション
 
 ---
 
-<!-- {"layout": "title_only", "freeze": true} -->
+<!-- {"layout": "title_only", "freeze": false} -->
 
 ## 自己紹介
 
@@ -89,7 +97,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": true} -->
+<!-- {"layout": "key_point", "freeze": false} -->
 
 ## それでは、本題へ…
 
