@@ -105,6 +105,12 @@ memo: |
 
 <!-- {"layout": "section", "freeze": false} -->
 
+## 今回の勉強会における<br>                       shellの設定について
+
+---
+
+<!-- {"layout": "section", "freeze": false} -->
+
 ## shellを彩るプロンプト
 
 ### AIのそれじゃないよ！
