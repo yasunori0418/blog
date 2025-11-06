@@ -141,6 +141,118 @@ memo: |
 
 ---
 
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## Question.<br>  shellのプロンプトってどうやって<br>  定義されているんだろう
+
+---
+
+<!-- {"layout": "space", "freeze": false} -->
+
+![プロンプト選択](./select_prompt.png)
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## Answer.<br>`echo $PS1`
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## ちなみに`ubuntu:latest`の<br>`docker image`だと、<br>こんな設定になっている
+
+![echo $PS1](./echo_ps1.png)
+
+---
+
+<!-- {"layout": "content_only", "freeze": false} -->
+
+- **エスケープシーケンス部分:**
+  - `\[\e]0;\u@\h: \w\a\]`
+  - ターミナルのタイトルバーを設定するエスケープシーケンスです。
+- **chroot環境の表示:**
+  - `${debian_chroot:+($debian_chroot)}`
+  - debian_chroot変数が設定されている場合、その値を括弧で囲んで表示します。
+- **ユーザー名:**
+  - `\u`
+  - 現在のユーザー名を表示します(例: root)。
+- **区切り文字:**
+  - `@`
+  - ユーザー名とホスト名の間の区切り文字です。
+
+---
+
+<!-- {"layout": "content_only", "freeze": false} -->
+
+- **ホスト名:**
+  - `\h`
+  - ホスト名の最初の部分を表示します(例: コンテナID)。
+- **カレントディレクトリ:**
+  - `:\w`
+  - コロンの後に現在の作業ディレクトリのフルパスを表示します。ホームディレクトリは`~`で省略されます。
+- **プロンプト記号:**
+  - `\$`
+  - 一般ユーザーなら`$`、rootユーザーなら`#`を表示します。
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## うわっ……<br>この複雑奇怪な文字列を組み合わせないと設定できないのか…
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## カッコよくて<br>良い感じにしたい！！<br><br>だけど、めんどそう……
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## そうだ、プラグインを使おう
+
+---
+
+<!-- {"layout": "2column_content_and_title", "freeze": false} -->
+
+## プロンプト設定用プラグイン紹介
+
+### romkatv/powerlevel10k
+
+![p10k](./p10k.png)
+
+### starship
+
+![starship](./starship.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## プロンプトに表示して欲しい内容
+
+- 現在のディレクトリ
+  - 階層が深いなら短いパスになってくれると更に良い(通称pathshorten)
+- リポジトリ内におけるGitの各種情報
+  - 現代のshell生活なら必須、そう思ってました…
+  - 以外と設定していない人がいて、今回の勉強会があるってわけ
+- 直前のコマンド実行時の`exit code`
+  - コマンド実行後に`echo $?`で確認できる終了コード
+  - `exit 0`で終了しているのを確認できると、とても安心できます
+- ホスト名(任意)
+  - ローカルのshell環境に限定するなら、ぶっちゃけ必要はない
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## 今回紹介したプラグインを使えば<br>必要な物は確実に表示されます！！
+
+---
+
 <!-- {"layout": "section", "freeze": false} -->
 
 ## 標準的なコマンドを置き換えよう！
