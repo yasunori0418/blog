@@ -261,6 +261,42 @@ memo: |
 
 ---
 
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## よく使う標準コマンド
+
+- `cd` → ディレクトリ移動
+- `ls` → ディレクトリ内のファイル・ディレクトリ一覧表示
+- `find` → ファイル・ディレクトリ検索
+- `grep` → ファイルから正規表現にマッチする行を検索し表示
+- `cat` → ファイル結合…なんだけど、ファイル表示に使われがち
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## これらのコマンドでも日常の<br>作業は特に困りません
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## ですが、折角のローカル環境なので<br>もっとオシャレにしませんか？
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## 置き換え先のコマンド達
+
+- `cd` → `zoxide`
+- `ls` → `eza`
+- `find` → `fd`
+- `grep` → `ripgrep`
+- `cat` → `bat`
+
+---
+
 <!-- {"layout": "section", "freeze": false} -->
 
 ## aliasだけじゃない！<br>これがプラグインやコマンドの<br>組み合わせだ！
