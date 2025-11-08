@@ -62,19 +62,19 @@ presentationID: 1m8f8NvQGheE_AyD5HhjDeVvE-MX26od8CocGWxmQlyI
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## サーバー上は無理でも、<br>ローカルのshell環境は<br>カッコよくしよう！！
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## これが、<br>今回の勉強会のモチベーション
 
 ---
 
-<!-- {"layout": "title_only", "freeze": false} -->
+<!-- {"layout": "title_only", "freeze": true} -->
 
 ## 自己紹介
 
@@ -97,19 +97,19 @@ memo: |
 
 ---
 
-<!-- {"layout": "key_point", "freeze": false} -->
+<!-- {"layout": "key_point", "freeze": true} -->
 
 ## それでは、本題へ…
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## 今回の勉強会における<br>                       shellの設定について
 
 ---
 
-<!-- {"layout": "2column_content_and_title", "freeze": false} -->
+<!-- {"layout": "2column_content_and_title", "freeze": true} -->
 
 ## 勉強会の目的
 
@@ -127,13 +127,13 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## つまり……<br><br>shellを設定していく上での<br>道標を示すだけです。
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## shellを彩るプロンプト
 
@@ -141,25 +141,25 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## Question.<br>  shellのプロンプトってどうやって<br>  定義されているんだろう
 
 ---
 
-<!-- {"layout": "space", "freeze": false} -->
+<!-- {"layout": "space", "freeze": true} -->
 
 ![プロンプト選択](./select_prompt.png)
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## Answer.<br>`echo $PS1`
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## ちなみに`ubuntu:latest`の<br>`docker image`だと、<br>こんな設定になっている
 
@@ -167,7 +167,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_only", "freeze": false} -->
+<!-- {"layout": "content_only", "freeze": true} -->
 
 - **エスケープシーケンス部分:**
   - `\[\e]0;\u@\h: \w\a\]`
@@ -184,7 +184,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_only", "freeze": false} -->
+<!-- {"layout": "content_only", "freeze": true} -->
 
 - **ホスト名:**
   - `\h`
@@ -198,25 +198,25 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## うわっ……<br>この複雑奇怪な文字列を組み合わせないと設定できないのか…
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## カッコよくて<br>良い感じにしたい！！<br><br>だけど、めんどそう……
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## そうだ、プラグインを使おう
 
 ---
 
-<!-- {"layout": "2column_content_and_title", "freeze": false} -->
+<!-- {"layout": "2column_content_and_title", "freeze": true} -->
 
 ## プロンプト設定用プラグイン紹介
 
@@ -230,7 +230,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## プロンプトに表示して欲しい内容
 
@@ -247,13 +247,13 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## 今回紹介したプラグインを使えば<br>必要な物は確実に表示されます！！
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## 標準的なコマンドを置き換えよう！
 
@@ -261,7 +261,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## よく使う標準コマンド
 
@@ -273,19 +273,19 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## これらのコマンドでも日常の<br>作業は特に困りません
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## ですが、折角のローカル環境なので<br>もっとオシャレにしませんか？
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## 置き換え先のコマンド達
 
@@ -297,7 +297,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## `zoxide`
 
@@ -307,7 +307,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## `eza`
 
@@ -317,7 +317,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## `fd`
 
@@ -327,7 +327,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## `ripgrep`
 
@@ -337,7 +337,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## `bat`
 
