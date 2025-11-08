@@ -361,6 +361,63 @@ memo: |
 
 ---
 
+<!-- {"layout": "content_and_title", "freeze": true} -->
+
+## shellのカスタマイズって言うと<br>aliasってよく言われるけど…
+
+- `~/.zshrc`にaliasがいっぱい設定されていってしまう
+- 設定した当時の自分にとっては最適解となる省略形だった
+  - 見直したときに、その当時の気持ちになれない
+- aliasが設定されていない環境に移ったときに`command not found`祭になる
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## > > > `command not found`祭 < < <
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": true} -->
+
+## 便利なローカルと、最小環境へのスイッチング方法<br>(※My rule)
+
+- ローカルの環境は便利であるのは前提にする
+- サーバー上などの最小環境はシンプルである前提で動く
+- 普段打つコマンドの意味や詳細を常に意識できるようにする
+- 過剰なaliasは設定しない
+  - 例1: 極端な短縮コマンド
+  - 例2: 定常的な一括操作
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": true} -->
+
+## 便利なローカルの証明としてfzfを使用する
+
+- 何かの一覧をパイプで渡し<br>インタラクティブに曖昧検索できるようにするファジーファインダーツール
+  - 「ファジーファインダーって…？」
+  - ??「ファジーにファインドするもの」
+- シェルスクリプトだけで、リッチな便利ツールが作れるくらい高機能
+- 類似ツールにpecoという物もあるが、<br>いろいろなツールの依存としてfzfが使われている率が高い
+- 前章で紹介した`zoxide`が依存として一部必要としていたりします
+
+---
+
+<!-- {"layout": "title_only", "freeze": true} -->
+
+## 私のdotfilesで<br>`cd $(fd -t d | fzf)`を実行した状態
+
+![fzf](./fzf.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## コマンドの意味と詳細を忘れないためのzeno.zsh
+
+---
+
 <!-- {"layout": "section", "freeze": false} -->
 
 ## 設定を維持していくためのdotfiles
