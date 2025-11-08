@@ -297,6 +297,46 @@ memo: |
 
 ---
 
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## `zoxide`
+
+![zoxide](./zoxide.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## `eza`
+
+![eza](./eza.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## `fd`
+
+![fd](./fd.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## `ripgrep`
+
+![ripgrep](./ripgrep.png)
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": false} -->
+
+## `bat`
+
+![bat](./bat.png)
+
+---
+
 <!-- {"layout": "section", "freeze": false} -->
 
 ## aliasだけじゃない！<br>これがプラグインやコマンドの<br>組み合わせだ！
