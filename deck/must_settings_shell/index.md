@@ -347,7 +347,13 @@ memo: |
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## これらのオシャレコマンド達は<br>日々どこかで開発されているので<br>いろいろ探してみましょう！
+
+---
+
+<!-- {"layout": "section", "freeze": true} -->
 
 ## aliasだけじゃない！<br>これがプラグインやコマンドの<br>組み合わせだ！
 
