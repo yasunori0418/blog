@@ -427,6 +427,18 @@ memo: |
 
 ---
 
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## このような標準のshellにはない、<br>便利機能を提供するツールは<br>いくつもあります。
+
+---
+
+<!-- {"layout": "title_center", "freeze": false} -->
+
+## shell設定の延長として、<br>このようなツールの組合せを<br>探求してみてください！
+
+---
+
 <!-- {"layout": "section", "freeze": false} -->
 
 ## 設定を維持していくためのdotfiles
