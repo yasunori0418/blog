@@ -378,7 +378,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## 便利なローカルと最小環境のコンテキストスイッチ<br>(※My rule)
 
@@ -447,12 +447,118 @@ memo: |
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## ここまでの解説で皆さんは<br>shellの設定が好きになりましたか？
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## 好きになってくれていたら<br>幸いです。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## それでは、その設定は<br>他のPCや別の環境に移動したら<br>無くなってしまうのでしょうか？
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## そんなのもったいない！！！
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": true} -->
+
+## 設定は全てコードであり、Gitで管理しましょう！！
+
+- 前提として、shellやターミナルなど初期状態は使いづらい物です。
+- そんな使いづらい物を使いやすく、オシャレにするための解説でした。
+- あなたが頑張って工夫凝らして設定した物は、あなたの資産です！
+- では…素晴らしい提案をしましょう……
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+
+## あなたもパブリックな<br>dotfilesを作りませんか？
+
+---
+
+<!-- {"layout": "content_and_title", "freeze": true} -->
+
+## そのためのdotfiles
+
+- まずはdotfilesという名前でリポジトリを作りましょう！
+- `.zshrc`や`.vimrc`などの設定ファイルをコミットしていきましょう！
+- もちろん、秘密鍵やAPIキーを<br>間違ってコミットしないように気をつけましょう！
+  - セキュアな情報の管理を学ぶ切っ掛けとしてdotfilesは有効です。
+- 無理に自動化するだけがdotfilesではありません。
+  - とりあえず設定ファイルをコミットしていきましょう！
+  - 慣れてきたらsymlinkをセットするスクリプトを書いてみましょう！
+  - shellの設定のように管理ツールはいくつもあります！
+
+---
+
+<!-- {"layout": "section", "freeze": true} -->
 
 ## まとめ
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
+## かなり勢い駆動な内容でしたが、<br>伝えたいのは<br>「shellは怖い物じゃないよ」<br>ってことです。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## 細かい解説は少なく、<br>「なんかオシャレでカッコイイ」<br>だけになってしまいました。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## 言い訳をさせて貰えるなら、
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## 「オシャレでカッコよくするための探求の余地を残した」
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## ということにさせてください。<br>(苦し紛れ)
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## エンジニアキャリアとしては<br>3年程度とまだまだ若輩物ではあります。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## ですが、<br>こうやって皆さんの前で話をできるだけ<br>成長できた切っ掛けとして、<br>shellとvimの設定がありました。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## 私はshellやvimの**設定が楽しくて**、<br>楽しさを追求して現在に至ります。
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## ぜひ、皆さんも<br>何か**楽しい物を見つけて**<br>探求してみてください！
+
+---
+
+<!-- {"layout": "title_center", "freeze": true} -->
+## shellやvimの設定に興味を持ったら、<br>どこかのイベントで熱く語り合いましょう！！
+
+---
+
+<!-- {"layout": "section", "freeze": true} -->
 
 ## 勉強会にご参加<br>ありがとうございました！
