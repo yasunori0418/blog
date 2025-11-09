@@ -378,9 +378,9 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": true} -->
+<!-- {"layout": "content_and_title", "freeze": false} -->
 
-## 便利なローカルと、最小環境へのスイッチング方法<br>(※My rule)
+## 便利なローカルと最小環境のコンテキストスイッチ<br>(※My rule)
 
 - ローカルの環境は便利であるのは前提にする
 - サーバー上などの最小環境はシンプルである前提で動く
@@ -412,7 +412,7 @@ memo: |
 
 ---
 
-<!-- {"layout": "content_and_title", "freeze": false} -->
+<!-- {"layout": "content_and_title", "freeze": true} -->
 
 ## コマンドの意味と詳細を忘れないためのzeno.zsh
 
@@ -427,19 +427,19 @@ memo: |
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## このような標準のshellにはない、<br>便利機能を提供するツールは<br>いくつもあります。
 
 ---
 
-<!-- {"layout": "title_center", "freeze": false} -->
+<!-- {"layout": "title_center", "freeze": true} -->
 
 ## shell設定の延長として、<br>このようなツールの組合せを<br>探求してみてください！
 
 ---
 
-<!-- {"layout": "section", "freeze": false} -->
+<!-- {"layout": "section", "freeze": true} -->
 
 ## 設定を維持していくためのdotfiles
 
