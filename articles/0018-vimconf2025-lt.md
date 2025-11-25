@@ -23,18 +23,29 @@ publication_name: loglass
 
 https://vimconf.org/2025/ja/
 
-よかったら過去の参加レポートもご覧ください。
-
-- [2024VimConfに参加しました](https://zenn.dev/vim_jp/articles/0015-2024vimconf)
-- [VimConf2023 Tinyに参加した話](https://zenn.dev/yasunori_kirin/articles/0003-vimconf_impressions)
-
 私は2023年から連続で参加しており、毎年楽しみにしているイベントでもあります。
 その2023年には[懇親会の中で突発的にLT](https://zenn.dev/vim_jp/articles/0002-engineer_with_vim)をするということもありましたが、公式の記録に残ることのない登壇でした。
 
-ですが、今年はLTのプロポーザルを出して、無事採択されたため、録画やスライド資料が残っています。
+今年は`Tried writing it vim9script`というタイトルでLTのプロポーザルを出して、無事採択されました。
+最近Vimと言えば、Neovimと混同されたり、VSCodeやIntellijのVim拡張の話題だったりすることがほとんどですが、これは本家本元の**最新のVim**の話です。
+その中でもVimのバージョン9から追加された`Vim9 script`について触れてみました。
+
+当日の資料などは、こちらに共有しておきます。
 
 https://speakerdeck.com/yasunori0418/tried-writing-it-vim9script
 
 https://youtu.be/wEsQF3hWYDE?si=9dRR2871a3fiNqb0&t=467
 
-LTの中で話すことができなかったことや、当日の良かった部分・改善点などを振り返っていきます。
+ここでは、LTの中で話すことができなかったことや、当日の良かった部分・改善点などを振り返っていきます。
+
+## プロポーザルについて
+
+## LTで話せなかったこと
+
+## 良かった部分
+
+## 改善すべき部分
+
+## 次回以降のVimConfに向けて
+
+## `:q!`
