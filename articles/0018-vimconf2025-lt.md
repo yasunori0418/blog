@@ -41,7 +41,6 @@ https://youtu.be/wEsQF3hWYDE?si=9dRR2871a3fiNqb0&t=467
 ## プロポーザルについて
 
 <!-- textlint-disable -->
-
 :::details 今回提出したプロポーザル
 
 ```markdown
@@ -60,6 +59,12 @@ https://github.com/yasunori0418/dotfiles/tree/main/home/.config/vim/autoload/use
 
 :::
 <!-- textlint-enable -->
+
+実のことを言うと、LTプロポーザルを提出したのは期限最終日のことでした。
+と言うのも、去年から今年にかけてVim活があまりできておらず、「自分には話すことがない」と登壇は諦めかけていました。
+
+そんな中、vim-jpの`#event-vimconf`チャンネルでLTのプロポーザル投稿で盛り上がっているところを見て、自分も何か喋べれることがないか自分のdotfilesを読み漁ってみたところ、
+`Vim9 script`が話せそうと思い、ギリギリでプロポーザルを投稿しました。
 
 ## LTで話せなかったこと
 
