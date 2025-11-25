@@ -40,6 +40,27 @@ https://youtu.be/wEsQF3hWYDE?si=9dRR2871a3fiNqb0&t=467
 
 ## プロポーザルについて
 
+<!-- textlint-disable -->
+
+:::details 今回提出したプロポーザル
+
+```markdown
+dpp.vimの読み込み部分を`vim9script`で書いてみました。
+その中で`vim9script`の「良いところ、気になったところ、注意点」があるので紹介します。
+https://github.com/yasunori0418/dotfiles/tree/main/home/.config/vim/autoload/user
+
+このLTでは`vim9script`を書いたことが無い人に、`vim9script`の雰囲気が伝わるような内容にします。
+
+- Ajenda
+1. Pros
+2. Cons
+3. Points to note
+4. Conclusion
+```
+
+:::
+<!-- textlint-enable -->
+
 ## LTで話せなかったこと
 
 ## 良かった部分
