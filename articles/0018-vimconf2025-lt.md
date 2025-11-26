@@ -127,6 +127,117 @@ Vim9 scriptの世界観では`nullable`や`optional`といった引数を宣言�
 
 ### map/filter/foreach
 
+### map/filterという破壊的な関数について
+
+`vim script`に組み込まれている`map`や`filter`などの関数は元の値を破壊的に変更する関数です。
+
+```vim
+let s:hoge_list = [1, 2, 3, 4, 5, 6]
+echo s:hoge_list->filter({_, v -> v % 2 == 0})->map({_, v -> $'item: {v}'}) " ['item: 2', 'item: 4', 'item: 6']
+echo s:hoge_list " ['item: 2', 'item: 4', 'item: 6']
+```
+
+上記のサンプルコードでは、数値型の配列に対して、`map`関数で文字列と連結し、文字列の配列に変化しています。
+
+破壊的な操作は意図しないバグを生む可能性があるため、回避した方が良いでしょう。
+組込みの関数には`mapnew`や`copy`といった非破壊的な関数があるため、これらを活用した方が良いでしょう。
+
+```vim
+let s:hoge_list = [1, 2, 3, 4, 5, 6]
+let s:fuga_list = s:hoge_list->copy()->filter({_, v -> v % 2 == 0})
+let s:piyo_list = s:fuga_list->mapnew({_, v -> $'item: {v}'}) 
+echo s:hoge_list " [1, 2, 3, 4, 5, 6]
+echo s:fuga_list " [2, 4, 6]
+echo s:piyo_list " ['item: 2', 'item: 4', 'item: 6']
+```
+
+ここでVim9 scriptの話に戻しますが、Vim9 scriptは静的型付けの言語であるため、宣言しておいた型から変化はできません。
+最初に提示したサンプルコードのような操作はできないため、後述したコードのように非破壊的な値操作を心掛ける必要があります。
+後述したコードをVim9 scriptで記述すると以下のようになります。
+
+```vim
+vim9script
+
+const hoge_list = [1, 2, 3, 4, 5, 6]
+const fuga_list = hoge_list->copy()->filter((_, v: number) => v % 2 == 0)
+const piyo_list = fuga_list->mapnew((_, v: number) => $'item: {v}') 
+echo hoge_list # [1, 2, 3, 4, 5, 6]
+echo fuga_list # [2, 4, 6]
+echo piyo_list # ['item: 2', 'item: 4', 'item: 6']
+```
+
+ちなみに、変数宣言に`const`を使っているのは好みの問題です。
+Vim9 scriptでは`var`でも問題ありませんが、`const`で宣言すれば値の変更ができなくなるので、意図しないデータの上書きや変更を防げてとても便利です。
+
+### foreachに渡すlambda式の引数省略できない問題
+
+foreach関数において、lambda式を第2引数に渡すときは以下のようになっています。
+
+<!-- markdownlint-disable MD010 -->
+```vimdoc
+foreach({expr1}, {expr2})				*foreach()* *E1525*
+
+		中略
+
+		{expr2} が |Funcref| の場合 2 つの引数を取る必要がある:
+			1. 現在の項目のキーまたはインデックス。
+			2. 現在の項目の値。
+```
+<!-- markdownlint-enable -->
+
+これはちゃんとドキュメントを読んでおけば回避できた話ではありますが、私は第1引数で現在の項目の値が取れると思い、以下のようにコードを書いていました。
+
+```vim
+vim9script
+
+hoge_list->foreach((v) => fuga(v)) # E1106: One argument too many
+```
+
+これによって`hoge_list`の各値が`fuga`関数に渡されて処理されると思っていましたが、`E1106`というエラーが発生しました。
+これを読んでみると次のような内容になっています。
+
+<!-- markdownlint-disable MD010 -->
+```vimdoc
+							*E1106*
+引数は、他の言語と同様に、"a:" なしで名前でアクセスされる。"a:" 辞書や "a:000"
+リストはない。
+```
+<!-- markdownlint-enable -->
+
+> 当時の私「????? Vim9 scriptはa:のパフォーマンス悪いとかで廃止してなかったか?????」
+
+ここでもう一度、foreachのドキュメントを読んでみましょう。
+
+<!-- markdownlint-disable MD010 -->
+```vimdoc
+foreach({expr1}, {expr2})				*foreach()* *E1525*
+
+		中略
+
+		{expr2} が |Funcref| の場合 2 つの引数を取る必要がある:
+			1. 現在の項目のキーまたはインデックス。
+			2. 現在の項目の値。
+		旧来のスクリプトの lambda では引数を 1 つだけ受け入れてもエラー
+		は発生しないが、Vim9 の lambda では "E1106: One argument too
+		many" になり、引数の数は一致する必要がある。
+		関数が値を返した場合、その値は無視される。
+```
+<!-- markdownlint-enable -->
+
+> Vim9 の lambda では "E1106: One argument too many" になり、引数の数は一致する必要がある。
+
+…ということです。
+ですので、以下のように書き直しましょう。
+
+```vim
+vim9script
+
+hoge_list->foreach((_, v) => fuga(v))
+```
+
+困ったらhelpを見るのは大事ですが、このforeachのようなヒントにならないようなエラーも出て混乱するときもあります。
+これを読んだ皆さんは、ぜひともforeachを使うときは`:h foreach`でドキュメントをよく確認しましょう。
+
 ## 良かった部分
 
 ## 改善すべき部分
