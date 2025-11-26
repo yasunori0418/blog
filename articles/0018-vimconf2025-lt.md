@@ -75,6 +75,56 @@ https://github.com/yasunori0418/dotfiles/tree/main/home/.config/vim/autoload/use
 
 ### nullに複数の型が存在する問題(`null_<type>`)
 
+Vim9 scriptには通常の`null`のほかに`null_<type>`という複数のnullに関する値が存在しています。
+これに対して「なんで…？」と聞かれても困る部分ではあり、どうしてそんな設計になっているのかは、天国のBram氏に聞いてみないと分かりません。
+
+以下のようなコードがあったときに明示的に`null_<type>`を使う必要があります。
+
+https://github.com/yasunori0418/dotfiles/blob/5f93c6a3eb91305bfb28578d0d71dfa52fa35051/home/.config/vim/autoload/user/dpp.vim#L6-L9
+
+6行目に宣言している`GetBaseDir`というlambda式によって宣言された関数は、文字列を引数として期待します。
+しかし、7行目の`GetBaseDir`呼び出しには`null_string`を使用しています。
+
+静的型付けの言語に慣れている方だと、違和感を感じるでしょう。
+シグネチャは`string`しか許容していないのに、`null`に相当する値を入れたら動かないと思いますよね？
+
+そういうときに使用するのが`null_<type>`のような特殊なnullになります。
+ちなみに、引数にあえて`null`を渡すと以下のようなエラーが発生します。
+
+```console
+Error detected while processing ~/dotfiles/home/.config/vim/vimrc[8]..~/dotfiles/home/.config/vim/autoload/user/dpp.vim:
+line    7:
+E1013: Argument 1: type mismatch, expected string but got special
+Error detected while processing ~/dotfiles/home/.config/vim/vimrc:
+line    8:
+E1048: Item not found in script: Setup
+Press ENTER or type command to continue
+```
+
+`GetBaseDir`自体が期待するのはstring型だけど、nullにしたいというケースのときに`null_string`をセットしないとエラーになってしまうのです。
+今回のケースの場合はlambda式を用いて作った関数で、デフォルト引数を宣言できません。
+ですが通常通りに関数を宣言しても同じことが発生します。
+
+https://github.com/yasunori0418/dotfiles/blob/785527ed91610b4d97e52ef0049246815308a8bb/home/.config/vim/autoload/user/dpp.vim#L6-L14
+
+<!-- markdownlint-disable MD013 -->
+```console
+E1013: Argument 1: type mismatch, expected string but got special
+Error detected while processing ~/dotfiles/home/.config/vim/vimrc:
+line    8:
+E1048: Item not found in script: Setup
+```
+<!-- markdownlint-enable MD013 -->
+
+Vim9 scriptの世界観では`nullable`や`optional`といった引数を宣言するときは、その型に合った`null`をデフォルト引数としてセットしてあげる必要があると思っておいた方が良いでしょう。
+
+詳しくは以下のヘルプを確認すると良いです。
+
+- `:h null`
+- `:h null-variables`
+- `:h null-compare`
+- `:h null-details`
+
 ### map/filter/foreach
 
 ## 良かった部分
