@@ -71,6 +71,12 @@ https://github.com/yasunori0418/dotfiles/tree/main/home/.config/vim/autoload/use
 
 ## LTで話せなかったこと
 
+今回、Vim9 scriptを書いていて一番詰まった部分は、発表資料内の「`points to note`」にまとめています。
+
+### nullに複数の型が存在する問題(`null_<type>`)
+
+### map/filter/foreach
+
 ## 良かった部分
 
 ## 改善すべき部分
