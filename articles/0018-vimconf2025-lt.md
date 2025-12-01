@@ -10,6 +10,8 @@ publication_name: loglass
 published_at: 2025-12-05 17:00
 ---
 
+![product_advent_calendar_2025_day5](/images/0018/product_advent_calendar_2025_day5.png)
+
 <!-- textlint-disable -->
 
 :::message
