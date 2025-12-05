@@ -24,12 +24,21 @@ _: {
               mdformat-frontmatter
               mdformat-tables
             ];
+            override-zenn-cli = pkgs.zenn-cli.overrideAttrs (prev: {
+              inherit (prev) version pname;
+              src = pkgs.fetchFromGitHub {
+                owner = "zenn-dev";
+                repo = "zenn-cli";
+                tag = prev.version;
+                hash = "sha256-wItKDLAJHIyxUUaLIFM+sNYWtXKWC4P6GkCKn2Wh2JA=";
+              };
+            });
           in
           with pkgs;
           [
             hugo
             markdownlint-cli
-            zenn-cli
+            override-zenn-cli
             pnpm
             silicon
             imagemagick
