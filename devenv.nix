@@ -24,13 +24,23 @@ _: {
               mdformat-frontmatter
               mdformat-tables
             ];
-            override-zenn-cli = pkgs.zenn-cli.overrideAttrs (prev: {
+            override-zenn-cli = pkgs.zenn-cli.overrideAttrs (prev: rec {
               inherit (prev) version pname;
               src = pkgs.fetchFromGitHub {
                 owner = "zenn-dev";
                 repo = "zenn-cli";
                 tag = prev.version;
                 hash = "sha256-wItKDLAJHIyxUUaLIFM+sNYWtXKWC4P6GkCKn2Wh2JA=";
+              };
+              pnpmDeps = pkgs.pnpm_10.fetchDeps {
+                inherit src;
+                inherit (prev)
+                  pname
+                  version
+                  pnpmWorkspaces
+                  ;
+                fetcherVersion = 1;
+                hash = "sha256-WXsS5/J08n/dWV5MbyX4vK7j1mfiUoLdzwmzyqoX3FA=";
               };
             });
           in
