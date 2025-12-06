@@ -32,16 +32,24 @@ _: {
                 tag = prev.version;
                 hash = "sha256-wItKDLAJHIyxUUaLIFM+sNYWtXKWC4P6GkCKn2Wh2JA=";
               };
-              pnpmDeps = pkgs.pnpm_10.fetchDeps {
-                inherit src;
-                inherit (prev)
-                  pname
-                  version
-                  pnpmWorkspaces
-                  ;
-                fetcherVersion = 1;
-                hash = "sha256-WXsS5/J08n/dWV5MbyX4vK7j1mfiUoLdzwmzyqoX3FA=";
-              };
+              pnpmDeps =
+                let
+                  inherit (pkgs.stdenv) isLinux;
+                in
+                pkgs.pnpm_10.fetchDeps {
+                  inherit src;
+                  inherit (prev)
+                    pname
+                    version
+                    pnpmWorkspaces
+                    ;
+                  fetcherVersion = 1;
+                  hash =
+                    if isLinux then
+                      "sha256-WXsS5/J08n/dWV5MbyX4vK7j1mfiUoLdzwmzyqoX3FA="
+                    else
+                      "sha256-QEOGL/FK0Vq8opPu7NeTTrk/rwWlMgisx+A7edMN9fw=";
+                };
             });
           in
           with pkgs;
