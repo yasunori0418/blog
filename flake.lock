@@ -43,11 +43,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1765926026,
-        "narHash": "sha256-gWK+l2KoqLHFQouG+/en4RARHfVpxHJmYyLJch577do=",
+        "lastModified": 1765985825,
+        "narHash": "sha256-Ph+dULhPcnefCb+XyTt1a5Vh3A9DFuEHMIlUXSh3KcQ=",
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "7b35de08ad80d3d4a146ab369760c24ae9bde881",
+        "rev": "51b8b1fc0659b0817dba0f5e40272f86809665ce",
         "type": "github"
       },
       "original": {
@@ -374,11 +374,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1765980524,
-        "narHash": "sha256-tZjkOrfjxO2ZVtIV6TX+2cojqac/7iN1BD3vqqT5SWQ=",
+        "lastModified": 1766018953,
+        "narHash": "sha256-bGiV6D2G+6JpsRqECuFTdWWYD0RkZQ99B0JcUFncIig=",
         "owner": "yasunori0418",
         "repo": "nur-packages",
-        "rev": "4a3445c07f68ac6d21b02ca5dacb2ed40a0b1ac5",
+        "rev": "ae82f7a7f9601b117675061ca3b98832fa0fd07f",
         "type": "github"
       },
       "original": {
