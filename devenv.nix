@@ -24,39 +24,12 @@ _: {
               mdformat-frontmatter
               mdformat-tables
             ];
-            override-zenn-cli = pkgs.zenn-cli.overrideAttrs (prev: rec {
-              inherit (prev) version pname;
-              src = pkgs.fetchFromGitHub {
-                owner = "zenn-dev";
-                repo = "zenn-cli";
-                tag = prev.version;
-                hash = "sha256-wItKDLAJHIyxUUaLIFM+sNYWtXKWC4P6GkCKn2Wh2JA=";
-              };
-              pnpmDeps =
-                let
-                  inherit (pkgs.stdenv) isLinux;
-                in
-                pkgs.pnpm_10.fetchDeps {
-                  inherit src;
-                  inherit (prev)
-                    pname
-                    version
-                    pnpmWorkspaces
-                    ;
-                  fetcherVersion = 1;
-                  hash =
-                    if isLinux then
-                      "sha256-WXsS5/J08n/dWV5MbyX4vK7j1mfiUoLdzwmzyqoX3FA="
-                    else
-                      "sha256-QEOGL/FK0Vq8opPu7NeTTrk/rwWlMgisx+A7edMN9fw=";
-                };
-            });
           in
           with pkgs;
           [
             hugo
             markdownlint-cli
-            override-zenn-cli
+            zenn-cli
             pnpm
             silicon
             imagemagick
