@@ -19,11 +19,11 @@ _: {
         packages =
           let
             myNurPkgs = inputs'.yasunori-nur.legacyPackages;
-            mdformatAndPlugins = with pkgs.python312Packages; [
-              mdformat
-              mdformat-frontmatter
-              mdformat-tables
-            ];
+            # mdformatAndPlugins = with pkgs.python312Packages; [
+            #   mdformat
+            #   mdformat-frontmatter
+            #   mdformat-tables
+            # ];
           in
           with pkgs;
           [
@@ -38,7 +38,8 @@ _: {
             myNurPkgs.k1Low-deck
             myNurPkgs.laminate
           ]
-          ++ mdformatAndPlugins;
+        # ++ mdformatAndPlugins;
+        ;
         processes = {
           hugo-server = {
             exec = ''
