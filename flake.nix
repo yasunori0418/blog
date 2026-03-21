@@ -3,7 +3,6 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    devenv.url = "github:cachix/devenv";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     yasunori-nur = {
       url = "github:yasunori0418/nur-packages";
@@ -14,13 +13,11 @@
   nixConfig = {
     extra-substituters = [
       "https://nix-community.cachix.org"
-      "https://devenv.cachix.org"
       "https://yasunori0418.cachix.org"
     ];
 
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
       "yasunori0418.cachix.org-1:mC1j+M5A6063OHaOB5bH2nS0BiCW/BJsSRiOWjLeV9o="
     ];
   };
@@ -41,15 +38,10 @@
       {
         imports =
           let
-            devenv.default = importApply ./devenv.nix;
+            shell.default = importApply ./devshell.nix;
           in
           [
-            # To import a flake module
-            # 1. Add foo to inputs
-            # 2. Add foo as a parameter to the outputs function
-            # 3. Add here: foo.flakeModule
-            inputs.devenv.flakeModule
-            devenv.default
+            shell.default
           ];
         systems = [
           "x86_64-linux"
