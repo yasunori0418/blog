@@ -9,7 +9,7 @@ topics:
   - python
   - cli
 published: true
-published_at: 2026-09-28 12:00
+published_at: 2026-09-30 12:00
 publication_name: loglass
 ---
 
