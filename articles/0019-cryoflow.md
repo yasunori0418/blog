@@ -16,6 +16,7 @@ publication_name: loglass
 <!-- textlint-disable -->
 :::message
 この記事は毎週必ず記事がでるテックブログ [Loglass Tech Blog Sprint](https://zenn.dev/topics/lgtechblogsprint) の163週目の記事です！
+4年間連続達成まで残り49週となりました！
 :::
 <!-- textlint-enable -->
 
