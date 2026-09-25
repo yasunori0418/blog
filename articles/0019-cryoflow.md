@@ -19,7 +19,7 @@ publication_name: loglass
 :::
 <!-- textlint-enable -->
 
-## ざっくりまとめ
+## 先に結論
 
 - parquetファイルをTOMLの設定ファイルで処理できるCLIツール「cryoflow」を作った
 - Polarsを採用したのは、SQLを使わずにメソッドチェインでデータ処理を積み重ねられるのが技術的におもしろかったから
