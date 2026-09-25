@@ -271,6 +271,8 @@ ERROR:     Validation failed: Column 'region' has type String, expected numeric 
 文字列の列を2倍にはできないので、実行前にエラーとして検出できました。
 大きなparquetファイルを処理する前に、設定ファイルの間違いに気付けるのはうれしいですね。
 
+出力にある`(label: default)`の`label`は、変換・出力プラグインがどの入力プラグインのデータを処理するかを対応付ける設定で、省略すると`default`になります。
+
 ## 技術スタック
 
 ここまで出てきたものも含めて、cryoflowの技術スタックは次の通りです。
