@@ -1,5 +1,5 @@
 ---
-title: "Polars LazyFrameを軸にした、プラグインで拡張できる列指向データ処理CLI「cryoflow」を作った"
+title: "Polars LazyFrameを関数としてつなぐデータ処理CLI「cryoflow」を、あえて作ってみた"
 emoji: "🫖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics:
@@ -22,12 +22,10 @@ publication_name: loglass
 
 ## 先に結論
 
-- parquetファイルをTOMLの設定ファイルで処理できるCLIツール「cryoflow」を作った
-- Polarsを採用したのは、SQLを使わなくてもメソッドチェインでデータ処理を積み重ねられるのが技術的におもしろかったから
-- DuckDBでもparquetは扱えるが、SQL文字列ではなく、小さな変換関数をプラグインとして合成したかった
-- 入力・変換・出力の3種類のプラグインを設定ファイルに並べるだけで、処理を組み立てられる
-- `check`コマンドで、データを読み込まずにスキーマの検証ができる
-- 同梱プラグインはまだ最小限で、動機だった編集系のプラグインはこれから
+- Polarsの`LazyFrame`を「`LazyFrame`を受け取って`LazyFrame`を返す関数」としてつなぎ、TOMLの設定ファイルで組み立てるCLI「cryoflow」を作ってみた
+- parquetの単発の加工ならDuckDBのSQLで済む。今回は実用性よりも、Polarsの遅延評価と関数合成の相性を確かめたくて、あえてプラグイン機構まで作った
+- 作ってみて、returnsの`Result`型でパイプラインを合成する便利さと、プラグイン単位でテストを書ける開発者体験が得られた。一方で、プラグイン機構の構築と、プラグインごとに観点が変わる`dry_run`の設計には手間がかかった
+- 同梱プラグインはまだ最小限で、変換は列の定数倍だけ
 
 https://github.com/yasunori0418/cryoflow
 
