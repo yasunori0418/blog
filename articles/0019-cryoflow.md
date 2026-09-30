@@ -148,36 +148,16 @@ SQLでもCTEやビューで処理を分割はできますが、分割した各�
 ### 設定ファイル
 
 ここからは、リポジトリの`examples/data/`に置いている`sample_sales.parquet`を例にします。
-架空の売上データで、全50行・12列の次のようなスキーマになっています。
+架空の売上データで、全50行・12列あります。
+この記事で使うのは、次の3列です。
 
 | 列名 | 型 | 内容 |
 | --- | --- | --- |
-| `order_id` | String | 注文ID |
-| `order_date` | Date | 注文日 |
 | `region` | String | 地域 |
-| `category` | String | カテゴリ |
-| `product_name` | String | 商品名 |
-| `unit_price` | Int64 | 単価 |
-| `quantity` | Int32 | 数量 |
-| `discount_rate` | Float64 | 割り引き率 |
-| `discount_amount` | Int64 | 割り引き額 |
 | `total_amount` | Int64 | 合計金額 |
-| `payment_method` | String | 支払い方法 |
 | `is_returned` | Boolean | 返品されたか |
 
-先頭の5行は次の通りです。
-
-<!-- markdownlint-disable MD013 -->
-
-| order_id | order_date | region | category | product_name | unit_price | quantity | discount_rate | discount_amount | total_amount | payment_method | is_returned |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ORD-0001 | 2025-02-05 | 東北 | 電子機器 | ノートPC | 61300 | 4 | 0.0 | 0 | 245200 | クレジットカード | false |
-| ORD-0002 | 2025-05-10 | 北海道 | 電子機器 | ノートPC | 24100 | 4 | 0.0 | 0 | 96400 | 電子マネー | false |
-| ORD-0003 | 2025-03-13 | 北海道 | 日用品 | 石鹸 | 800 | 8 | 0.1 | 640 | 5760 | 電子マネー | false |
-| ORD-0004 | 2025-03-28 | 東北 | 食品 | チョコレート | 700 | 4 | 0.2 | 560 | 2240 | クレジットカード | false |
-| ORD-0005 | 2025-01-12 | 九州 | 食品 | チョコレート | 2200 | 5 | 0.2 | 2200 | 8800 | クレジットカード | false |
-
-<!-- markdownlint-enable MD013 -->
+ほかの列を含めたスキーマの全体は、リポジトリの[`examples/data/README.md`](https://github.com/yasunori0418/cryoflow/blob/main/examples/data/README.md)を参照してください。
 
 設定ファイルはTOMLで書きます。
 `input_plugins`・`transform_plugins`・`output_plugins`にそれぞれプラグインを並べていくだけです。
