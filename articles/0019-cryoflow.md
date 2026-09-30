@@ -240,6 +240,19 @@ flowchart LR
 これはデータを処理せずに、スキーマ(列名と型)だけを受け取って検証するためのものです。
 Polarsの`LazyFrame`は`collect_schema()`で、データを読み込まずにスキーマを取得できます。
 入力プラグインの`dry_run`はこれでスキーマを取り出します。
+`run`と`check`では、プラグインを呼ぶ順序は同じで、受け渡すものが`LazyFrame`かスキーマかが変わります。
+
+```mermaid
+flowchart LR
+  subgraph run["cryoflow run（execute）"]
+    direction LR
+    I1["Input"] -- LazyFrame --> T1["Transform"] -- LazyFrame --> O1["Output"]
+  end
+  subgraph check["cryoflow check（dry_run）"]
+    direction LR
+    I2["Input<br/>collect_schema()"] -- スキーマ --> T2["Transform<br/>列や型を検証"] -- スキーマ --> O2["Output"]
+  end
+```
 
 試しに先ほどの設定ファイルで、`column_name`を文字列の列である`region`に変えて`check`コマンドを実行してみます。
 
