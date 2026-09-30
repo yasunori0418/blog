@@ -533,8 +533,8 @@ rules:
     expected: だいたい
   - pattern: 大抵
     expected: たいてい
-  - pattern: 大変
-    expected: たいへん
+  - pattern: たいへん
+    expected: 大変
   - pattern: 沢山
     expected: たくさん
   - pattern:
