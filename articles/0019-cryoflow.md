@@ -220,6 +220,15 @@ class OutputPlugin(BasePlugin):
 同梱プラグインはすべて`LazyFrame`のまま受け渡します。
 そのため、cryoflowのパイプライン自体が、Polarsの遅延評価をそのまま設定ファイルで組み立てる形になっています。
 
+```mermaid
+flowchart LR
+  subgraph cfg["config.toml に並べた順に処理"]
+    direction LR
+    I["InputPlugin<br/>scan_parquet"] -- LazyFrame --> T["TransformPlugin<br/>with_columns など"] -- LazyFrame --> O["OutputPlugin<br/>sink_parquet"]
+  end
+  O --> X[("ここで初めて<br/>処理が実行される")]
+```
+
 戻り値が`Result`になっているのは、[returns](https://github.com/dry-python/returns)というライブラリを使っているためです。
 どこかのプラグインで失敗したら、以降の処理は実行されずにエラーがそのまま伝わっていきます。
 言い換えると、cryoflowのパイプラインは、`Result`を返す関数を`bind`(前段が成功したときだけ次の関数を適用する)でつないだ合成です。
