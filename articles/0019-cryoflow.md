@@ -1,5 +1,5 @@
 ---
-title: "Polars LazyFrameを関数としてつなぐデータ処理CLI「cryoflow」を、あえて作ってみた"
+title: "Polars LazyFrameを関数としてつなぐデータ処理CLI「cryoflow」を作ってみた"
 emoji: "🫖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics:
